@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "originsplus",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Origins Plus",
+  "description": "Adds more origins to origins. Also allows you to limit players to choose unique origins",
   "authors": [
-    "Me!"
+    "lochnessdragon"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
@@ -14,22 +14,23 @@
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/originsplus/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "com.github.originsplus.OriginsPlus"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "originsplus.mixins.json"
   ],
 
   "depends": {
     "fabricloader": ">=0.7.4",
     "fabric": "*",
-    "minecraft": "1.16.x"
+    "minecraft": "1.16.x",
+    "origins" : "0.5.1"
   },
   "suggests": {
     "another-mod": "*"
