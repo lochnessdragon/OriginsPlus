@@ -1,6 +1,10 @@
 {
   "replace": false,
   "origins": [
-    "originsplus:dwarven"
+    "originsplus:dwarven",
+    "originsplus:icicle",
+    "originsplus:monke",
+    "originsplus:zombified",
+    "originsplus:wyvern"
   ]
 }
