@@ -1,11 +1,11 @@
-{
+
 	"powers": [
 		"origins:",
 		"origins:",
 		"origins:",
 		"origins:"
 	],
-	"icon": "minecraft:blue_ice",
-	"order": 4,
+	"icon": "minecraft:gunpowder",
+	"order": 1,
 	"impact": 2
 }
