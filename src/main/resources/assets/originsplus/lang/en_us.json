@@ -1,11 +1,7 @@
 {
-  "layer.originsplus.class.name": "Class",
-  "layer.originsplus.class.missing_origin.name": "Missing",
-  "layer.originsplus.class.missing_origin.description": "You do not have a class.",
+  "origin.originsplus.dwarven.name": "Dwarven",
+  "origin.originsplus.dwarven.description": "You descend from a line accustomed to working underground.",
   
-  "origin.originsplus.farmer.name": "Farmer",
-  "origin.originsplus.farmer.description": "You have a green thumb and excel at farming.",
-  
-  "power.originsplus.increased_yield.name": "Increased Crop Yield",
-  "power.originsplus.increased_yield.description": "%s chance to harvest double crops."
+  "power.originsplus.darkvision.name": "Darkvision",
+  "power.originsplus.darkvision.description": "You are able to see in the dark slightly."
 }

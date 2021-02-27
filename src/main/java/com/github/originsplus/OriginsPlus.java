@@ -9,6 +9,7 @@ import net.fabricmc.api.ModInitializer;
 public class OriginsPlus implements ModInitializer {
 
 	public static Logger LOGGER = LogManager.getLogger();
+	public static String MOD_ID = "originsclasses";
 	
 	@Override
 	public void onInitialize() {

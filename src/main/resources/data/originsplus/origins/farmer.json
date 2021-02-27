@@ -1,8 +1,0 @@
-{
-	"impact": 1,
-	"order": 1,
-	"icon": "minecraft:wheat",
-	"powers" : [
-		"originsplus:increased_yield"
-	]
-}
