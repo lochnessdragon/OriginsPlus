@@ -3,6 +3,10 @@
 	"order": 1,
 	"icon": "minecraft:iron_pickaxe",
 	"powers": [ 
-		"originsplus:darkvision"
+		"orignsplus:dwarf_height",
+		"originsplus:darkvision",
+		"originsplus:better_mining",
+		"origins:bigger_appettite",
+		"originsplus:sun_blinded"
 	]
 }
