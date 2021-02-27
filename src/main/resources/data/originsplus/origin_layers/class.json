@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "order": 10,
+  "enabled": true,
+  "origins": [
+    "originsplus:farmer"
+  ],
+  "allow_random": true,
+  "allow_random_unchoosable": false
+}

@@ -1,0 +1,11 @@
+{
+  "layer.originsplus.class.name": "Class",
+  "layer.originsplus.class.missing_origin.name": "Missing",
+  "layer.originsplus.class.missing_origin.description": "You do not have a class.",
+  
+  "origin.originsplus.farmer.name": "Farmer",
+  "origin.originsplus.farmer.description": "You have a green thumb and excel at farming.",
+  
+  "power.originsplus.increased_yield.name": "Increased Crop Yield",
+  "power.originsplus.increased_yield.description": "%s chance to harvest double crops."
+}
