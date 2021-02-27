@@ -1,3 +1,4 @@
 {
-	"type": "origins:simple"
+  "type": "origins:shader",
+  "shader": "minecraft:shaders/post/blur.json"
 }
