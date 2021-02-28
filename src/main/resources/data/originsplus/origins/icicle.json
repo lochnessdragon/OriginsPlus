@@ -1,8 +1,0 @@
-{ 
-	"powers": [
-		"originsplus:damagefromsnowballs"
-	],
-	"icon": "minecraft:blue_ice",
-	"order": 4,
-	"impact": 1
-}

@@ -1,9 +1,0 @@
-{
-	"impact": 4,
-	"order": 1,
-	"icon": "minecraft:iron_pickaxe",
-	"powers": [ 
-		"originsplus:darkvision",
-		"originsplus:sun_blinded"
-	]
-}

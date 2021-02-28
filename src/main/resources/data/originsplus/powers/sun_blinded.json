@@ -1,5 +1,0 @@
-{
-  "type": "origins:shader",
-  "shader": "minecraft:shaders/post/blur.json",
-  "condition": "origins:exposed_to_sky"
-}
