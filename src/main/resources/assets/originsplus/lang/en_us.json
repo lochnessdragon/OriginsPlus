@@ -18,5 +18,8 @@
   "origin.originsplus.zombified.description": "You were once raised from the dead and now you have POWER!",
   
   "power.originsplus.darkvision.name": "Darkvision",
-  "power.originsplus.darkvision.description": "You are able to see in the dark slightly."
+  "power.originsplus.darkvision.description": "You are able to see in the dark slightly.",
+  
+  "power.originsplus.sun_blinded.name": "Sun Suceptibility",
+  "power.originsplus.sun_blinded.description": "After your years working and living underground, the natural sunlight hurts your eyes without the use of a helmet."
 }

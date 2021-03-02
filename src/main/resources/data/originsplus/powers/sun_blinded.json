@@ -1,5 +1,6 @@
 {
-  "type": "origins:simple",
+  "type": "originsplus:blindness",
+  "strength": 0.4,
   "condition": {
   	"type": "origins:exposed_to_sky"
   }
