@@ -40,6 +40,11 @@ dependencies {
 	// PSA: Some older mods, compiled on Loom 0.2.1, might have outdated Maven POMs.
 	// You may need to force-disable transitiveness on them.
 	modImplementation "com.github.apace100:origins-fabric:${project.origins_version}"
+
+	// Satin (for blindness/bluriness)
+	modImplementation "io.github.ladysnake:Satin:${satin_version}"
+    // Include Satin as a Jar-in-Jar dependency (optional)
+    include "io.github.ladysnake:Satin:${satin_version}"
 }
 
 processResources {

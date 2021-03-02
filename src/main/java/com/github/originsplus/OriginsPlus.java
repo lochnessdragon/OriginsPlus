@@ -7,6 +7,7 @@ import com.github.originsplus.registry.ModPowers;
 import com.github.originsplus.registry.ModStatusEffects;
 
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.client.gl.ShaderEffect;
 import net.minecraft.util.Identifier;
 
 public class OriginsPlus implements ModInitializer {
