@@ -17,7 +17,7 @@ public class OriginsPlus implements ModInitializer {
 	
 	@Override
 	public void onInitialize() {
-		LOGGER.info("OriginsPlus Initializing...");
+		LOGGER.info("Origins+ is Initializing - Have fun w/ the new classes!");
 		ModStatusEffects.register();
 		ModPowers.register();
 	}

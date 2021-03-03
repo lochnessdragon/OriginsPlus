@@ -1,9 +1,0 @@
-{
-	"passes": [
-		{ 
-			"name": "originsplus:gaussian",
-			"intarget": "minecraft:main",
-			"outtarget": "minecraft:main"
-		}
-	]
-}

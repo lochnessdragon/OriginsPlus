@@ -4,6 +4,10 @@
 	"icon": "minecraft:iron_pickaxe",
 	"powers": [ 
 		"originsplus:darkvision",
-		"originsplus:sun_blinded"
+		"originsplus:sun_blinded",
+		"origins:strong_arms",
+		"origins:strong_arms_break_speed",
+		"originsplus:hastenize",
+		"originsplus:dwarven_appettite"
 	]
 }

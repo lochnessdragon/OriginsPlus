@@ -20,6 +20,12 @@
   "entrypoints": {
     "main": [
       "com.github.originsplus.OriginsPlus"
+    ],
+    "client": [
+    	"com.github.originsplus.OriginsPlusClient"
+    ],
+    "server": [
+    	"com.github.originsplus.OriginsPlusServer"
     ]
   },
   "mixins": [
