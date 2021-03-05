@@ -17,14 +17,14 @@ repositories {
     // See https://docs.gradle.org/current/userguide/declaring_repositories.html
     // for more information about repositories.
 	maven {
-		url 'https://jitpack.io'
-	}
-	maven {
 		name = "AdrianTodt's Maven"
 		url = "https://dl.bintray.com/adriantodt/maven"
 	}
 	maven {
 		url "https://maven.jamieswhiteshirt.com/libs-release/"
+	}
+	maven {
+		url 'https://jitpack.io'
 	}
 }
 
@@ -45,6 +45,9 @@ dependencies {
 	modImplementation "io.github.ladysnake:Satin:${satin_version}"
     // Include Satin as a Jar-in-Jar dependency (optional)
     include "io.github.ladysnake:Satin:${satin_version}"
+    
+    // PekHui (for dwarf scale)
+    modImplementation "com.github.virtuoel:pehkui:${pehkui_version}"
 }
 
 processResources {
