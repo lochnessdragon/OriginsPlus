@@ -22,7 +22,6 @@ public class ModifyScalePower extends Power {
 	@Override
 	public void onAdded() {
 		super.onAdded();
-		System.out.println("OnAdded");
 		for(ScaleType type : MODIFY_SIZE_TYPES) {
 			setScale(scale, type);
 		}
@@ -31,7 +30,6 @@ public class ModifyScalePower extends Power {
 	@Override
 	public void onRemoved() {
 		super.onRemoved();
-		System.out.println("OnRemoved");
 		for(ScaleType type : MODIFY_SIZE_TYPES) {
 			setScale(1.0f, type);
 		}

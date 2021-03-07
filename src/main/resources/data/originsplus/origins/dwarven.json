@@ -11,6 +11,8 @@
 		"originsplus:dwarven_appettite",
 		"originsplus:dwarven_size",
 		"originsplus:apply_haste",
-		"originsplus:extra_ores"
+		"originsplus:extra_ores",
+		"originsplus:hastenize_display",
+		"originsplus:hastenize_toggle_display"
 	]
 }

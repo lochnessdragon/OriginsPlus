@@ -1,10 +1,11 @@
 package com.github.originsplus.registry;
 
+import java.util.function.Predicate;
+
 import com.github.originsplus.OriginsPlus;
 import com.github.originsplus.power.BlindnessPower;
 import com.github.originsplus.power.ModifyBlockDrop;
 import com.github.originsplus.power.ModifyScalePower;
-import com.google.common.base.Predicate;
 
 import io.github.apace100.origins.power.factory.PowerFactory;
 import io.github.apace100.origins.registry.ModRegistries;

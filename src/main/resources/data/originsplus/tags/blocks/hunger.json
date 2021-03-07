@@ -1,8 +1,0 @@
-{
-  "type": "origins:modify_exhaustion",
-  "modifier": {
-    "name": "Non-existant metabolism",
-    "value": -10,
-    "operation": "multiply_base"
-  }
-}

@@ -1,6 +1,6 @@
 package com.github.originsplus.power;
 
-import com.google.common.base.Predicate;
+import java.util.function.Predicate;
 
 import io.github.apace100.origins.power.Power;
 import io.github.apace100.origins.power.PowerType;
@@ -22,21 +22,21 @@ public class ModifyBlockDrop extends Power {
 		this.predicate = predicate;
 	}
 
-    public boolean doesApply(BlockPos pos) {
-        CachedBlockPosition cbp = new CachedBlockPosition(player.world, pos, true);
-        return predicate.test(cbp);
-    }
+	public boolean doesApply(BlockPos pos) {
+		CachedBlockPosition cbp = new CachedBlockPosition(player.world, pos, true);
+		return predicate.test(cbp);
+	}
 
-    public boolean doesApply(CachedBlockPosition pos) {
-        return predicate.test(pos);
-    }
+	public boolean doesApply(CachedBlockPosition pos) {
+		return predicate.test(pos);
+	}
 
-    public float getChance() {
-    	return chance;
-    }
-    
-    public float getExtraRolls() {
-    	return extraRolls;
-    }
-	
+	public float getChance() {
+		return chance;
+	}
+
+	public float getExtraRolls() {
+		return extraRolls;
+	}
+
 }

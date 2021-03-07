@@ -2,8 +2,28 @@
 	"type": "originsplus:modify_block_drops",
 	"chance": 0.5,
 	"extra_rolls": 1.0,
+	"block_condition": {
+		"type":"origins:in_tag",
+		"tag": "originsplus:dwarf_double_drop_blocks"
+	},
 	"condition": {
-		"type": "origins:power_active",
-		"power": "originsplus:hastenize"
+		"type": "origins:and",
+		"conditions":[
+			{
+				"type": "origins:power_active",
+				"power": "originsplus:hastenize"
+			},
+			{
+				"type": "origins:equipped_item",
+				"equipment_slot": "mainhand",
+				"item_condition": {
+					"type": "origins:enchantment",
+					"enchantment": "minecraft:silk_touch",
+					"comparison": ">=",
+					"compare_to": 0
+				},
+				"inverted": true
+			}
+		]
 	}
 }
