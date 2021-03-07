@@ -8,6 +8,9 @@
 		"origins:strong_arms",
 		"origins:strong_arms_break_speed",
 		"originsplus:hastenize",
-		"originsplus:dwarven_appettite"
+		"originsplus:dwarven_appettite",
+		"originsplus:dwarven_size",
+		"originsplus:apply_haste",
+		"originsplus:extra_ores"
 	]
 }

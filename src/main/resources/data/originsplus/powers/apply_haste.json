@@ -1,0 +1,41 @@
+{
+	"type": "origins:modify_break_speed",
+	"modifier": {
+		"operation": "multiply_total",
+		"value": 1,
+		"name": "%s faster break speed."
+	},
+	"block_condition": {
+		"type":"origins:or",
+		"conditions": [
+			{
+				"type": "origins:in_tag",
+				"tag": "origins:natural_stone"
+			},
+			{
+				"type": "origins:in_tag",
+				"tag": "originsplus:ores"
+			},
+			{
+				"type": "origins:in_tag",
+				"tag": "minecraft:stone_bricks"
+			},
+			{
+				"type": "origins:in_tag",
+				"tag": "minecraft:stone_tool_materials"
+			},
+			{
+				"type": "origins:in_tag",
+				"tag": "minecraft:gold_ores"
+			},
+			{
+				"type": "origins:in_tag",
+				"tag": "minecraft:sand"
+			}
+		]
+	},
+	"condition": {
+		"type": "origins:power_active",
+		"power": "originsplus:hastenize"
+	}
+}

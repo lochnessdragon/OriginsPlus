@@ -1,11 +1,14 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "net.fabricmc.example.mixin",
+  "package": "com.github.originsplus.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
   ],
   "client": [
+  ],
+  "server": [
+  	"AbstractBlockMixin"
   ],
   "injectors": {
     "defaultRequire": 1
