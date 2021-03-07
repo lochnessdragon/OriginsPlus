@@ -1,5 +1,5 @@
 {
-	"type": "origins:modify_block_drops",
+	"type": "originsplus:modify_block_drops",
 	"chance": 0.5,
 	"extra_rolls": 1.0,
 	"condition": {
