@@ -1,6 +1,7 @@
 { 
 	"powers": [
-		"originsplus:damagefromsnowballs"
+		"originsplus:damagefromsnowballs",
+		"originsplus:ice_speed"
 	],
 	"icon": "minecraft:blue_ice",
 	"order": 4,

@@ -21,5 +21,29 @@
   "power.originsplus.darkvision.description": "You are able to see in the dark slightly.",
   
   "power.originsplus.sun_blinded.name": "Sun Suceptibility",
-  "power.originsplus.sun_blinded.description": "After your years working and living underground, the natural sunlight hurts your eyes without the use of a helmet."
+  "power.originsplus.sun_blinded.description": "After your years working and living underground, the natural sunlight hurts your eyes without the use of a helmet.",
+  
+  "power.originsplus.apply_haste.name": "Haste",
+  "power.originsplus.apply_haste.description": "You have a natural rhythm with your pickaxe.",
+  
+  "power.originsplus.dwarven_size.name": "Shrunken",
+  "power.originsplus.dwarven_size.description": "Your kind has adapted to living in small cramped spaces, making you smaller than the average height.",
+  
+  "power.originsplus.dwarven_appettite.name": "Hard worker",
+  "power.originsplus.dwarven_appettite.description": "The use of your mining speed has made it so you have a larger appettite.",
+  
+  "power.originsplus.extra_ores.name": "Good fortune",
+  "power.originsplus.extra_ores.description": "You can gain an additional 50% when mining ores that don't drop a block.",
+  
+  "power.originsplus.hunger.name": "Non-existant metabolism",
+  "power.originsplus.hunger.description": "You are dead so your metabolism no longer exists, so you don't need to eat any food.",
+  
+  "power.originsplus.ice_speed.name": "Ice speed",
+  "power.originsplus.ice_speed.description": "You use the slipperiness of ice to your advantage to gain extra speed.",
+  
+  "power.originsplus.damagefromsnowballs.name": "Strong arm",
+  "power.originsplus.damagefromsnowballs.description": "You can throw snowballs hard enough to do damage to other players and mobs.",
+  
+  "power.originsplus.firewall.name": "Fireball",
+  "power.originsplus.firewall.description": "You can hurl flaming balls of fire at your enemies."
 }

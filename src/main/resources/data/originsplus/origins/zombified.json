@@ -1,9 +1,10 @@
 {
 	"powers": [
-		"origins:",
-		"origins:",
-		"origins:",
-		"origins:"
+		"origins:burn_in_daylight",
+		"origins:natural_armor",
+		"origins:hotblooded",
+		"originsplus:"
+		"
 	],
 	"icon": "minecraft:rotten_flesh",
 	"order": 2,

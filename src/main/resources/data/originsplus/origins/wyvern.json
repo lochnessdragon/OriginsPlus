@@ -1,9 +1,10 @@
 {
 	"powers": [
 		"origins:fire_immunity",
-		"origins:",
-		"origins:",
-		"origins:"
+		"origins:water_vulnerability",
+		"origins:nether_spawn",
+		"origins:carnivore",
+		"originsplus:firewall"
 	],
 	"icon": "minecraft:blaze_rod",
 	"order": 3,

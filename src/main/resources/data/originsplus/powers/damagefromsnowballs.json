@@ -1,11 +1,10 @@
 {
   "type": "origins:modify_damage_dealt",
-  "modifier": {
+  "modifier":{  
     "name": "Snowball damage given",
-    "value": 5000,
+    "value": 2,
     "operation": "addition"
   },
-  
  "hidden":false
 }
 
