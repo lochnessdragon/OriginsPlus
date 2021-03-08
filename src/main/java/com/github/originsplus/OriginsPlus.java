@@ -29,9 +29,9 @@ public class OriginsPlus implements ModInitializer {
 		// register block broken callback
 		BlockDropCallback.EVENT.register((block, state, world, pos, player) -> {
 			if (!world.isClient) {
-				System.out.println("Block broken!");
+				//System.out.println("Block broken!");
 				if (OriginComponent.hasPower(player, ModifyBlockDrop.class)) {
-					System.out.println("Player has the modify block drop power");
+					//System.out.println("Player has the modify block drop power");
 					Optional<ModifyBlockDrop> dropOptional = OriginComponent.getPowers(player, ModifyBlockDrop.class).stream()
 							.filter((power) -> {
 								return power.doesApply(pos);
@@ -47,11 +47,11 @@ public class OriginsPlus implements ModInitializer {
 								}
 							}).findFirst();
 					
-					if(!dropOptional.isEmpty()) {
-						System.out.println("Potentially dropping extra blocks!");
+					if(dropOptional.isPresent()) {
+						//System.out.println("Potentially dropping extra blocks!");
 						ModifyBlockDrop drop = dropOptional.get();
 						if (drop.getChance() > world.getRandom().nextFloat()) {
-							System.out.println("Dropped extra blocks");
+							//System.out.println("Dropped extra blocks");
 							for (int i = 0; i < drop.getExtraRolls(); i++) {
 								block.dropStacks(state, world, pos);
 							}

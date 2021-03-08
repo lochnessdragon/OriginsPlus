@@ -3,12 +3,12 @@
 	"chance": 0.5,
 	"extra_rolls": 1.0,
 	"block_condition": {
-		"type":"origins:in_tag",
+		"type": "origins:in_tag",
 		"tag": "originsplus:dwarf_double_drop_blocks"
 	},
 	"condition": {
 		"type": "origins:and",
-		"conditions":[
+		"conditions": [
 			{
 				"type": "origins:power_active",
 				"power": "originsplus:hastenize"
@@ -20,9 +20,9 @@
 					"type": "origins:enchantment",
 					"enchantment": "minecraft:silk_touch",
 					"comparison": ">=",
-					"compare_to": 0
-				},
-				"inverted": true
+					"compare_to": 1,
+					"inverted": true
+				}
 			}
 		]
 	}
