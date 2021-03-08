@@ -24,19 +24,16 @@
   "power.originsplus.sun_blinded.description": "After your years working and living underground, the natural sunlight hurts your eyes without the use of a helmet.",
   
   "power.originsplus.apply_haste.name": "Haste",
-  "power.originsplus.apply_haste.description": "You have a natural rhythm with your pickaxe.",
+  "power.originsplus.apply_haste.description": "You have a natural rhythm with your pickaxe. Press G to gain a small buff to your breaking speed.",
   
   "power.originsplus.dwarven_size.name": "Shrunken",
   "power.originsplus.dwarven_size.description": "Your kind has adapted to living in small cramped spaces, making you smaller than the average height.",
   
   "power.originsplus.dwarven_appettite.name": "Hard worker",
-  "power.originsplus.dwarven_appettite.description": "The use of your mining speed has made it so you have a larger appettite.",
+  "power.originsplus.dwarven_appettite.description": "Your mining speed buff decreases your hunger faster",
   
   "power.originsplus.extra_ores.name": "Good fortune",
-  "power.originsplus.extra_ores.description": "You can gain an additional 50% when mining ores that don't drop a block.",
-  
-  "power.originsplus.hunger.name": "Non-existant metabolism",
-  "power.originsplus.hunger.description": "You are dead so your metabolism no longer exists, so you don't need to eat any food.",
+  "power.originsplus.extra_ores.description": "You have a 50% chance to get double drops on ore blocks which drop their smelted form when haste is active.",
   
   "power.originsplus.ice_speed.name": "Ice speed",
   "power.originsplus.ice_speed.description": "You use the slipperiness of ice to your advantage to gain extra speed.",
