@@ -2,9 +2,8 @@
 	"powers": [
 		"origins:burn_in_daylight",
 		"origins:natural_armor",
-		"origins:hotblooded",
-		"originsplus:"
-		"
+		"origins:prevent_sleep",
+		"origins:hotblooded"
 	],
 	"icon": "minecraft:rotten_flesh",
 	"order": 2,
