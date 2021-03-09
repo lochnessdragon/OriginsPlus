@@ -1,0 +1,23 @@
+{
+	"type": "origins:prevent_sleep",
+	"block_condition": {
+		"type": "origins:and",
+		"conditions":[
+			{
+				"type": "origins:height",
+				"comparison": "<",
+				"compare_to": 75
+			},
+			{
+				"type": "origins:offset",
+				"y": -1,
+				"condition": {
+					"type": "origins:in_tag",
+					"tag": "minecraft:leaves",
+					"inverted": true
+				}
+			}
+		]
+	},
+	"message": "As a monke, you have to sleep in the trees or above Y: 70"
+}

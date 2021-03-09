@@ -1,9 +1,11 @@
 {
 	"powers": [
-		"origins:burn_in_daylight",
+		"originsplus:burn_in_daylight",
 		"origins:natural_armor",
-		"origins:prevent_sleep",
-		"origins:hotblooded"
+		"origins:hotblooded",
+		"originsplus:zombie_group",
+		"originsplus:anger_villagers",
+		"originsplus:pacify_hoistiles"
 	],
 	"icon": "minecraft:rotten_flesh",
 	"order": 2,

@@ -1,0 +1,21 @@
+{
+	"type": "originsplus:grapple",
+	"strength": 1.5,
+	"cooldown": 60,
+	"hud_render": {
+		"should_render": true,
+		"sprite_location": "originsplus:textures/gui/originsplus/resource_bar_01.png",
+		"bar_index": 0
+	},
+	"key": "primary",
+	"sound_on_thrown": "minecraft:entity.fishing_bobber.throw",
+	"sound_on_retract": "minecraft:entity.fishing_bobber.retrieve",
+	"condition": {
+		"type": "origins:on_block",
+		"block_condition" : {
+			"type": "origins:block",
+			"block": "minecraft:air",
+			"inverted": true
+		}
+	}
+}

@@ -4,14 +4,20 @@ import java.util.function.Predicate;
 
 import com.github.originsplus.OriginsPlus;
 import com.github.originsplus.power.BlindnessPower;
+import com.github.originsplus.power.GrapplePower;
 import com.github.originsplus.power.ModifyBlockDrop;
 import com.github.originsplus.power.ModifyScalePower;
 
+import io.github.apace100.origins.power.Active;
 import io.github.apace100.origins.power.factory.PowerFactory;
 import io.github.apace100.origins.registry.ModRegistries;
+import io.github.apace100.origins.util.HudRender;
 import io.github.apace100.origins.util.SerializableData;
 import io.github.apace100.origins.util.SerializableDataType;
 import net.minecraft.block.pattern.CachedBlockPosition;
+import net.minecraft.entity.EntityType;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.registry.Registry;
 
 public class ModPowers {
@@ -36,6 +42,26 @@ public class ModPowers {
 									? (Predicate<CachedBlockPosition>) data.get("block_condition")
 									: cbp -> true);
 				}).allowCondition());
+        register(new PowerFactory<>(OriginsPlus.identifier("grapple"),
+                new SerializableData()
+                    .add("cooldown", SerializableDataType.INT)
+                    .add("sound_on_thrown", SerializableDataType.SOUND_EVENT, null)
+                    .add("sound_on_retract", SerializableDataType.SOUND_EVENT, null)
+                    .add("strength", SerializableDataType.DOUBLE, 0.25)
+                    .add("hud_render", SerializableDataType.HUD_RENDER)
+                    .add("key", SerializableDataType.ACTIVE_KEY_TYPE, Active.KeyType.PRIMARY),
+                data ->
+                    (type, player) -> {
+                        GrapplePower power = new GrapplePower(type, player,
+                            data.getInt("cooldown"),
+                            (HudRender)data.get("hud_render"),
+                            (SoundEvent) data.get("sound_on_thrown"),
+                            (SoundEvent) data.get("sound_on_retract"),
+                            data.getDouble("strength"));
+                        power.setKey((Active.KeyType)data.get("key"));
+                        return power;
+                    })
+                .allowCondition());
 	}
 
 	private static void register(PowerFactory serializer) {

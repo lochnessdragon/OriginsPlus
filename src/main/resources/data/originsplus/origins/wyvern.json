@@ -5,7 +5,8 @@
 		"origins:nether_spawn",
 		"origins:carnivore",
 		"originsplus:firewall",
-		"origins:flame_particles"
+		"origins:flame_particles",
+		"origins:damage_from_snowballs"
 	],
 	"icon": "minecraft:blaze_rod",
 	"order": 3,

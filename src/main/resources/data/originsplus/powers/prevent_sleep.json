@@ -1,9 +1,4 @@
 {
   "type": "origins:prevent_sleep",
-  "block_condition": {
-    "type": "origins:height",
-    "comparison": "<",
-    "compare_to": 0
-  },
-  "message": "You can't sleep."
+  "message": "A zombie sleeping? I don't think so!"
 }

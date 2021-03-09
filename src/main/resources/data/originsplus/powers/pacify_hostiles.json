@@ -1,0 +1,15 @@
+{
+	"type": "originsplus:modify_behavior",
+	"behavior": "passive",
+	"entities": [
+		"minecraft:zombie",
+		"minecraft:creeper",
+		"minecraft:spider",
+		"minecraft:cave_spider",
+		"minecraft:skeleton",
+		"minecraft:ghast",
+		"minecraft:phantom",
+		"minecraft:blaze",
+		"minecraft:wither_skeleton"
+	]
+}
