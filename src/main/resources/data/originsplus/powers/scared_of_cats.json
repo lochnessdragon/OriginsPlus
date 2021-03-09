@@ -1,0 +1,18 @@
+{
+	"type": "origins:damage_over_time",
+	"interval": 30,
+	"damage": 2,
+	"damage_source": {
+		"name": "magic",
+		"bypasses_armor": true,
+		"unblockable": true
+	},
+	"condition": {
+		"type": "originsplus:entities_in_radius",
+		"radius": 10,
+		"entities": [
+			"minecraft:cat",
+			"minecraft:ocelot"
+			]
+	}
+}
