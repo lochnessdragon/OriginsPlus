@@ -40,7 +40,7 @@ public class ExplodePower extends ActiveCooldownPower {
 	private void explode() {
 		DestructionType type = shouldBreakBlocks ? DestructionType.BREAK : DestructionType.NONE;
 		
-		player.world.createExplosion(player, player.getX(), player.getY(), player.getZ(), explosionStrength, DestructionType.NONE);
+		player.world.createExplosion(player, player.getX(), player.getY(), player.getZ(), explosionStrength, type);
 	
 		player.damage(DamageSource.explosion(player), selfDamage);
 	}

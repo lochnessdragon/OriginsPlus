@@ -2,22 +2,24 @@ package com.github.originsplus.registry;
 
 import java.util.List;
 
-import io.github.apace100.origins.Origins;
+import com.github.originsplus.OriginsPlus;
+
 import io.github.apace100.origins.power.factory.condition.ConditionFactory;
 import io.github.apace100.origins.registry.ModRegistries;
 import io.github.apace100.origins.util.SerializableData;
 import io.github.apace100.origins.util.SerializableDataType;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.registry.Registry;
 
-public class ModPlayerConditions {
+public class ModEntityConditions {
 
+	@SuppressWarnings("unchecked")
 	public static void register() {
-		register(new ConditionFactory<PlayerEntity>(
-				Origins.identifier("entities_in_radius"), new SerializableData()
+		register(new ConditionFactory<>(
+				OriginsPlus.identifier("entities_in_radius"), new SerializableData()
 						.add("entities", SerializableDataType.list(SerializableDataType.ENTITY_TYPE)).add("radius", SerializableDataType.FLOAT),
 				(data, player) -> {
 					float radius = data.getFloat("radius");
@@ -34,8 +36,7 @@ public class ModPlayerConditions {
 				}));
 	}
 
-	private static void register(ConditionFactory<PlayerEntity> conditionFactory) {
-		Registry.register(ModRegistries.PLAYER_CONDITION, conditionFactory.getSerializerId(), conditionFactory);
-	}
-
+    private static void register(ConditionFactory<LivingEntity> conditionFactory) {
+        Registry.register(ModRegistries.ENTITY_CONDITION, conditionFactory.getSerializerId(), conditionFactory);
+    }
 }

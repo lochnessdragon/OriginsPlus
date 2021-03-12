@@ -1,7 +1,7 @@
 {
 	"type": "originsplus:explode",
 	"break_blocks": false,
-	"strength": 5,
+	"strength": 2,
 	"self_damage": 4,
 	"key": "primary",
 	"cooldown": 80,

@@ -5,7 +5,10 @@
 		"origins:hotblooded",
 		"originsplus:zombie_group",
 		"originsplus:anger_villagers",
-		"originsplus:pacify_hoistiles"
+		"originsplus:pacify_hostiles",
+		"originsplus:buff_spawners",
+		"originsplus:prevent_sleep",
+		"originsplus:block_sleep"
 	],
 	"icon": "minecraft:rotten_flesh",
 	"order": 2,
