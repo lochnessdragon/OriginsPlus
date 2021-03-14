@@ -28,7 +28,7 @@ public class ModifyBehavior extends Power {
 	
 	public static enum EntityBehavior {
 		HOSTILE,
-		NUETRAL,
+		NEUTRAL,
 		PASSIVE
 	}
 
