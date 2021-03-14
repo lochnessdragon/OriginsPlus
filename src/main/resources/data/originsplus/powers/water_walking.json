@@ -1,0 +1,16 @@
+{
+	"type": "origins:multiple",
+	"toggle" : {
+		"type": "origins:toggle",
+		"key": "primary",
+		"active_by_default": false
+	},
+	"frost_walker": {
+		"originsplus:frost_walker",
+		"level": 2,
+		"condition": {
+			"type": "origins:power_active",
+			"power": "origins:water_walking_toggle"
+		}
+	}
+}

@@ -68,10 +68,10 @@ public class GrapplePower extends ActiveCooldownPower {
 		
 		Vec3d distance = new Vec3d(bobberPos.x - player.getPos().x, bobberPos.y - player.getPos().y, bobberPos.z - player.getPos().z);
 		distance = distance.normalize();
-		System.out.println(distance);
+		//System.out.println(distance);
 		
 		Vec3d velocity = new Vec3d(distance.x * strength, distance.y * strength, distance.z * strength);
-		System.out.println(velocity);
+		//System.out.println(velocity);
 		
 		Vec3d playerVelocity = player.getVelocity().add(velocity);
 		

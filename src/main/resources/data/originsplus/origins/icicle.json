@@ -2,7 +2,8 @@
 	"powers": [
 		"originsplus:damagefromsnowballs",
 		"originsplus:ice_speed",
-		"originsplus:flammable"
+		"originsplus:flammable",
+		"originsplus:water_walking"
 	],
 	"icon": "minecraft:blue_ice",
 	"order": 4,
