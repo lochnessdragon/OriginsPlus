@@ -8,7 +8,8 @@
 		"originsplus:pacify_hostiles",
 		"originsplus:buff_spawners",
 		"originsplus:prevent_sleep",
-		"originsplus:block_sleep"
+		"originsplus:block_sleep",
+		"originsplus:convert_villagers"
 	],
 	"icon": "minecraft:rotten_flesh",
 	"order": 2,

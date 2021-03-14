@@ -30,6 +30,7 @@ public class ModPowers {
 
 	public static final PowerTypeReference PREVENT_PHANTOM_SPAWN = new PowerTypeReference(
 			OriginsPlus.identifier("block_sleep_prevent_phantom_spawn"));
+	public static final PowerTypeReference CONVERT_VILLAGERS = new PowerTypeReference(OriginsPlus.identifier("convert_villagers"));
 
 	public static void register() {
 		register(new PowerFactory<>(OriginsPlus.identifier("blindness"),
