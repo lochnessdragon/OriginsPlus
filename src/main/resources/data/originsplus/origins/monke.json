@@ -1,10 +1,9 @@
 {
 	"powers": [
-		"origins:sprint_jump",
 		"origins:vegetarian",
-		"origins:more_kinetic_damage",
 		"origins:water_vulnerability",
-		"origins:"
+		"originsplus:sleep_in_trees",
+		"originsplus:grapple"
 	],
 	"icon": "minecraft:bamboo",
 	"order": 3,

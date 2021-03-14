@@ -4,7 +4,10 @@
   "package": "com.github.originsplus.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-  	"BlockMixin"
+  	"BlockMixin",
+  	"EntityMixin",
+  	"ServerPlayerEntityMixin",
+  	"PlayerEntityMixin"
   ],
   "client": [
   ],

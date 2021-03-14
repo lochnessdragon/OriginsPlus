@@ -1,0 +1,10 @@
+{
+	"type": "origins:multiple",
+	"prevent_phantom_spawn": {
+		"type": "origins:simple"	
+	},
+	"prevent_player_sleep": {
+		"type": "originsplus:block_player_sleep",
+		"count_player_towards_sleep_goal": false
+	}
+}	

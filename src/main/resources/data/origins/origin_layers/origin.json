@@ -1,6 +1,7 @@
 {
   "replace": false,
   "origins": [
+  	"originsplus:creeper",
     "originsplus:dwarven",
     "originsplus:icicle",
     "originsplus:monke",

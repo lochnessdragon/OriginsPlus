@@ -20,7 +20,7 @@ import net.minecraft.world.World;
 @Mixin(Block.class)
 public class BlockMixin {
 	  
-	@Inject(at = @At(value = "HEAD"), method = "Lnet/minecraft/block/Block;onBreak()V", cancellable = true)
+	@Inject(at = @At(value = "HEAD"), method = "Lnet/minecraft/block/Block;onBreak(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;Lnet/minecraft/entity/player/PlayerEntity;)V", cancellable = true)
 	public void onStacksDropped(final World world, final BlockPos pos, final BlockState state, final PlayerEntity player, final CallbackInfo info) {
         ActionResult result = BlockDropCallback.EVENT.invoker().onBreak((Block) (Object) this, state, world, pos, player);
         

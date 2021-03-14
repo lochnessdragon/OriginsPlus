@@ -1,0 +1,13 @@
+{
+	"type": "originsplus:explode",
+	"break_blocks": false,
+	"strength": 2,
+	"self_damage": 4,
+	"key": "primary",
+	"cooldown": 80,
+	"ignitable": true,
+	"hud_render": {
+		"bar_index": 0,
+		"should_render": true
+	}
+}

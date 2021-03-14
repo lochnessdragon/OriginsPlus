@@ -1,0 +1,8 @@
+{
+	"type": "originsplus:modify_behavior",
+	"behavior": "hostile",
+	"entities": [
+		"minecraft:villager",
+		"minecraft:iron_golem"
+	]
+}
