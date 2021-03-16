@@ -74,6 +74,8 @@ public class MobSpawnerLogicMixin {
 				}
 			}
 		}
+		
+		//System.out.println("Spawn Count was: " + logicAccessor.getSpawnCount() + " and is now: " + spawnCount);
 		logicAccessor.setSpawnCount(spawnCount);
 	}
 

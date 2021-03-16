@@ -3,6 +3,7 @@
 	"behavior": "hostile",
 	"entities": [
 		"minecraft:villager",
-		"minecraft:iron_golem"
+		"minecraft:iron_golem",
+		"minecraft:snow_golem"
 	]
 }

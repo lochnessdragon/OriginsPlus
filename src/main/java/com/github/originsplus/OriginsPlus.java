@@ -19,6 +19,7 @@ import net.minecraft.entity.mob.ZombieEntity;
 import net.minecraft.entity.mob.ZombieVillagerEntity;
 import net.minecraft.entity.passive.VillagerEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.projectile.thrown.SnowballEntity;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.NbtOps;
 import net.minecraft.nbt.Tag;
@@ -65,6 +66,7 @@ public class OriginsPlus implements ModInitializer {
 						serverWorld.syncWorldEvent((PlayerEntity) null, 1026, player.getBlockPos(), 0);
 					}
 				}
+				
 			}
 
 			return ActionResult.PASS;

@@ -1,15 +1,16 @@
 {
 	"type": "originsplus:modify_behavior",
-	"behavior": "passive",
+	"behavior": "neutral",
 	"entities": [
 		"minecraft:zombie",
+		"minecraft:zombie_villager",
 		"minecraft:creeper",
 		"minecraft:spider",
 		"minecraft:cave_spider",
 		"minecraft:skeleton",
-		"minecraft:ghast",
-		"minecraft:phantom",
 		"minecraft:blaze",
+		"minecraft:husk",
+		"minecraft:stray",
 		"minecraft:wither_skeleton"
 	]
 }

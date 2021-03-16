@@ -1,5 +1,7 @@
 package com.github.originsplus.power;
 
+import com.github.originsplus.entity.IGrappleHook;
+
 import io.github.apace100.origins.power.ActiveCooldownPower;
 import io.github.apace100.origins.power.PowerType;
 import io.github.apace100.origins.util.HudRender;
@@ -9,7 +11,6 @@ import net.minecraft.network.packet.s2c.play.EntityVelocityUpdateS2CPacket;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
-import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 
 public class GrapplePower extends ActiveCooldownPower {
@@ -33,7 +34,7 @@ public class GrapplePower extends ActiveCooldownPower {
 	@Override
 	public void onUse() {
 		if (!player.world.isClient) {
-			if (thrown) {
+			if (thrown && !grappleHook.removed) {
 				// retract
 				retractGrapple();
 			} else if (canUse()) {
@@ -50,7 +51,11 @@ public class GrapplePower extends ActiveCooldownPower {
 					SoundCategory.NEUTRAL, 0.5F, 0.4F / (player.getRandom().nextFloat() * 0.4F + 0.8F));
 		}
 		
+		FishingBobberEntity playerHook = player.fishHook;
+		
 		grappleHook = new FishingBobberEntity(player, player.world, 0, 0);
+		((IGrappleHook) grappleHook).setGrapple(true); 
+		player.fishHook = playerHook; // reset player fishhook
 		player.world.spawnEntity(grappleHook);
 
 		this.thrown = true;

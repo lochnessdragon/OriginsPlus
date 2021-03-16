@@ -1,0 +1,39 @@
+{
+	"type": "origins:damage_over_time",
+	"interval": 20,
+	"damage": 2,
+	"protection_enchantment": "minecraft:fire_protection",
+	"condition": {
+		"type": "origins:and",
+		"conditions": [
+			{
+				"type": "origins:dimension",
+				"dimension": "minecraft:the_nether"
+			},
+			{
+				"type": "origins:on_block",
+				"block_condition": {
+					"type": "origins:in_tag",
+					"tag": "originsplus:ice_and_snow",
+					"inverted": true
+				}
+			},
+			{
+				"type": "origins:in_block",
+				"block_condition": {
+					"type": "origins:block",
+					"block": "minecraft:cauldron",
+					"inverted": true
+				}
+			},
+			{
+				"type": "origins:in_block",
+				"block_condition": {
+					"type": "origins:block",
+					"block": "minecraft:nether_portal",
+					"inverted": true
+				}
+			}
+		]
+	}
+}

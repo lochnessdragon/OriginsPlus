@@ -1,4 +1,5 @@
 {
   "type": "origins:prevent_sleep",
-  "message": "A zombie sleeping? I don't think so!"
+  "message": "A zombie sleeping? I don't think so!",
+  "hidden": true
 }

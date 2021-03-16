@@ -1,4 +1,9 @@
 {
 	"type": "originsplus:improve_spawners",
-	"radius": 15
+	"radius": 15,
+	"modifier": {
+		"operation": "addition",
+		"value": 100,
+		"name": "Adds %s to the spawn count of spawners"
+	}
 }

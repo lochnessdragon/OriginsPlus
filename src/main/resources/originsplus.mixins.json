@@ -9,7 +9,16 @@
   	"ServerPlayerEntityMixin",
   	"PlayerEntityMixin",
   	"MobSpawnerLogicMixin",
-  	"MobSpawnerLogicAccessor"
+  	"MobSpawnerLogicAccessor",
+  	"SnowballEntityMixin",
+  	"LivingEntityMixin",
+  	"FishingBobberEntityMixin",
+  	"TrackTargetGoalAccessor",
+  	"FollowTargetGoalAccessor",
+  	"FollowTargetGoalMixin",
+  	"VillagerHostilesSensorMixin",
+  	"SnowGolemEntityMixin",
+  	"IronGolemEntityMixin"
   ],
   "client": [
   ],

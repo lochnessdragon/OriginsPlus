@@ -1,15 +1,15 @@
 {
 	"powers": [
-		"originsplus:burn_in_daylight",
+		"originsplus:anger_villagers",
+		"originsplus:convert_villagers",
+		"originsplus:pacify_hostiles",
+		"originsplus:buff_spawners",
 		"origins:natural_armor",
 		"origins:hotblooded",
 		"originsplus:zombie_group",
-		"originsplus:anger_villagers",
-		"originsplus:pacify_hostiles",
-		"originsplus:buff_spawners",
 		"originsplus:prevent_sleep",
 		"originsplus:block_sleep",
-		"originsplus:convert_villagers"
+		"originsplus:burn_in_daylight"
 	],
 	"icon": "minecraft:rotten_flesh",
 	"order": 2,

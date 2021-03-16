@@ -1,16 +1,32 @@
 {
 	"type": "origins:multiple",
-	"toggle" : {
+	"toggle": {
 		"type": "origins:toggle",
 		"key": "primary",
 		"active_by_default": false
 	},
 	"frost_walker": {
-		"originsplus:frost_walker",
-		"level": 2,
+		"type": "originsplus:frost_walker",
+		"strength": 2,
 		"condition": {
 			"type": "origins:power_active",
-			"power": "origins:water_walking_toggle"
+			"power": "originsplus:water_walking_toggle"
 		}
+	},
+	"display": {
+		"type": "origins:resource",
+		"min": 0,
+		"max": 1,
+		"start_value": 1,
+		"hud_render": {
+			"should_render": true,
+			"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+			"bar_index": 8,
+			"condition": {
+				"type": "origins:power_active",
+				"power": "originsplus:water_walking_toggle"
+			}
+		},
+		"hidden": true
 	}
 }

@@ -6,9 +6,15 @@ import net.minecraft.entity.player.PlayerEntity;
 
 public class WaterWalkingPower extends Power {
 
-	public WaterWalkingPower(PowerType<?> type, PlayerEntity player) {
+	int strength;
+	
+	public WaterWalkingPower(PowerType<?> type, PlayerEntity player, int strength) {
 		super(type, player);
-		// TODO Auto-generated constructor stub
+		this.strength = strength;
+	}
+	
+	public int getStrength() {
+		return strength;
 	}
 
 }

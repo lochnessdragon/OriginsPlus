@@ -1,10 +1,10 @@
 {
 	"powers": [
+		"originsplus:firewall",
+		"origins:nether_spawn",
 		"origins:fire_immunity",
 		"origins:water_vulnerability",
-		"origins:nether_spawn",
 		"origins:carnivore",
-		"originsplus:firewall",
 		"origins:flame_particles",
 		"origins:damage_from_snowballs"
 	],
