@@ -65,7 +65,9 @@ public abstract class FishingBobberEntityMixin implements IGrappleHook {
 		FishingBobberEntity entity = (FishingBobberEntity) (Object) this;
 		
 		if (((IGrappleHook) entity).isGrapple()) {
-			previousFishHook = entity.getPlayerOwner().fishHook;
+			if(entity.getPlayerOwner() != null) {
+				previousFishHook = entity.getPlayerOwner().fishHook;
+			}
 		}
 	}
 	
@@ -74,7 +76,9 @@ public abstract class FishingBobberEntityMixin implements IGrappleHook {
 		FishingBobberEntity entity = (FishingBobberEntity) (Object) this;
 		
 		if (((IGrappleHook) entity).isGrapple()) {
-			entity.getPlayerOwner().fishHook = previousFishHook;
+			if(entity.getPlayerOwner() != null) {
+				entity.getPlayerOwner().fishHook = previousFishHook;
+			}
 		}
 	}
 
