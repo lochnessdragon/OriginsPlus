@@ -1,4 +1,7 @@
 # Origins+ Mod
+![Build Badge](https://img.shields.io/github/workflow/status/lochnessdragon/OriginsPlus/build) ![Version](https://img.shields.io/github/v/release/lochnessdragon/OriginsPlus)
+
+Error Checker: ![Error Check Badge](https://img.shields.io/github/workflow/status/lochnessdragon/OriginsPlus/Gradle%20Error%20Checker)
 
 ## Setup
 
