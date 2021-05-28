@@ -1,5 +1,6 @@
 {
   "type": "origins:prevent_sleep",
   "message": "A zombie sleeping? I don't think so!",
-  "hidden": true
+  "hidden": true,
+  "set_spawn_point": true
 }
