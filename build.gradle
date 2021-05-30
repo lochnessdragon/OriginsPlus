@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '0.5-SNAPSHOT'
+	id 'fabric-loom' version '0.7-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -17,10 +17,6 @@ repositories {
     // See https://docs.gradle.org/current/userguide/declaring_repositories.html
     // for more information about repositories.
 	maven {
-		name = "AdrianTodt's Maven"
-		url = "https://dl.bintray.com/adriantodt/maven"
-	}
-	maven {
 		url "https://maven.jamieswhiteshirt.com/libs-release/"
 	}
 	maven {
@@ -28,6 +24,9 @@ repositories {
 	}
 	maven {
 		url "https://maven.shedaniel.me/"
+	}
+	maven {
+		url "https://maven.terraformersmc.com/"
 	}
 }
 
@@ -43,14 +42,9 @@ dependencies {
 	// PSA: Some older mods, compiled on Loom 0.2.1, might have outdated Maven POMs.
 	// You may need to force-disable transitiveness on them.
 	modImplementation "com.github.apace100:origins-fabric:${project.origins_version}"
-
-	// Satin (for blindness/bluriness)
-	modImplementation "io.github.ladysnake:Satin:${satin_version}"
-    // Include Satin as a Jar-in-Jar dependency (optional)
-    include "io.github.ladysnake:Satin:${satin_version}"
     
     // PekHui (for dwarf scale)
-    modImplementation "com.github.virtuoel:pehkui:${pehkui_version}"
+    modImplementation "com.github.Virtuoel:Pehkui:${pehkui_version}"
 }
 
 processResources {

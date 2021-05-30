@@ -12,7 +12,7 @@ public class OriginsPlusClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
 		// register shaders
-		ModShaders.register();
+		
 	}
 
 }

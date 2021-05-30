@@ -35,10 +35,11 @@ public class ModPowers {
 			OriginsPlus.identifier("convert_villagers"));
 
 	public static void register() {
-		register(new PowerFactory<>(OriginsPlus.identifier("blindness"),
-				new SerializableData().add("strength", SerializableDataType.FLOAT, 1.0F), (data) -> (type, player) -> {
-					return new BlindnessPower(type, player, data.getFloat("strength"));
-				}).allowCondition());
+//		register(new PowerFactory<>(OriginsPlus.identifier("blindness"),
+//				new SerializableData().add("strength", SerializableDataType.FLOAT, 1.0F), (data) -> (type, player) -> {
+//					return new BlindnessPower(type, player, data.getFloat("strength"));
+//				}).allowCondition());
+		
 		register(new PowerFactory<>(OriginsPlus.identifier("scale"),
 				new SerializableData().add("scale_amount", SerializableDataType.FLOAT, 1.0F),
 				(data) -> (type, player) -> {

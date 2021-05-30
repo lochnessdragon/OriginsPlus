@@ -36,10 +36,10 @@ public class ModifyScalePower extends Power {
 	}
 	
 	private void setScale(float scale, ScaleType type) {
-		final ScaleData scaleData = ScaleData.of((Entity) player, type);
+		final ScaleData scaleData = ScaleData.Builder.create().entity(player).type(type).build();
 		scaleData.setScale(scale);
 		scaleData.setTargetScale(scale);
-		scaleData.markForSync();
+		scaleData.markForSync(true);
 	}
 
 }

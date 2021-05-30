@@ -1,6 +1,6 @@
 {
-  "type": "originsplus:blindness",
-  "strength": 10.0,
+  "type": "origins:shader",
+  "shader": "minecraft:shaders/post/blur.json",
   "condition": {
   	"type": "origins:and",
   	"conditions": [
