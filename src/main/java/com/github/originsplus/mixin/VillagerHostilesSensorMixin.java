@@ -21,7 +21,7 @@ public class VillagerHostilesSensorMixin {
 
 	@Inject(at = @At(value = "HEAD"), method = "isHostile", cancellable = true)
 	public void markZombiePlayerAsHostile(final LivingEntity entity, CallbackInfoReturnable<Boolean> info) {
-		VillagerHostilesSensor sensor = (VillagerHostilesSensor) (Object) this;
+//		VillagerHostilesSensor sensor = (VillagerHostilesSensor) (Object) this;
 		
 		List<ModifyBehavior> powers = OriginComponent.getPowers(entity, ModifyBehavior.class);
 		powers.removeIf((power) -> {

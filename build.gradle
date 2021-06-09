@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '0.7-SNAPSHOT'
+	id 'fabric-loom' version '0.6-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -20,13 +20,13 @@ repositories {
 		url "https://maven.jamieswhiteshirt.com/libs-release/"
 	}
 	maven {
-		url 'https://jitpack.io'
-	}
-	maven {
 		url "https://maven.shedaniel.me/"
 	}
 	maven {
 		url "https://maven.terraformersmc.com/"
+	}
+	maven {
+		url 'https://jitpack.io'
 	}
 }
 
@@ -44,7 +44,9 @@ dependencies {
 	modImplementation "com.github.apace100:origins-fabric:${project.origins_version}"
     
     // PekHui (for dwarf scale)
-    modImplementation "com.github.Virtuoel:Pehkui:${pehkui_version}"
+    modImplementation("com.github.virtuoel:pehkui:${project.pehkui_version}") {
+        exclude(group: "net.fabricmc.fabric-api")
+    }
 }
 
 processResources {
