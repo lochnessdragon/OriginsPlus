@@ -38,8 +38,6 @@ public class ModifyScalePower extends Power {
 	private void setScale(float scale, ScaleType type) {
 		ScaleData scaleData = type.getScaleData(player);
 		scaleData.setScale(scale);
-		//scaleData.setTargetScale(scale);
-		//scaleData.markForSync(true);
 	}
 
 }
