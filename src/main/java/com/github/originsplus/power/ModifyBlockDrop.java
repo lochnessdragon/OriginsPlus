@@ -1,12 +1,12 @@
 package com.github.originsplus.power;
 
-import java.util.function.Predicate;
-
-import io.github.apace100.origins.power.Power;
-import io.github.apace100.origins.power.PowerType;
+import io.github.apace100.apoli.power.Power;
+import io.github.apace100.apoli.power.PowerType;
 import net.minecraft.block.pattern.CachedBlockPosition;
-import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.util.math.BlockPos;
+
+import java.util.function.Predicate;
 
 public class ModifyBlockDrop extends Power {
 
@@ -14,8 +14,8 @@ public class ModifyBlockDrop extends Power {
 	float extraRolls;
 	private final Predicate<CachedBlockPosition> predicate;
 
-	public ModifyBlockDrop(PowerType<Power> type, PlayerEntity player, float chance, float extraRolls,
-			Predicate<CachedBlockPosition> predicate) {
+	public ModifyBlockDrop(PowerType<Power> type, LivingEntity player, float chance, float extraRolls,
+						   Predicate<CachedBlockPosition> predicate) {
 		super(type, player);
 		this.chance = chance;
 		this.extraRolls = extraRolls;
@@ -23,7 +23,7 @@ public class ModifyBlockDrop extends Power {
 	}
 
 	public boolean doesApply(BlockPos pos) {
-		CachedBlockPosition cbp = new CachedBlockPosition(player.world, pos, true);
+		CachedBlockPosition cbp = new CachedBlockPosition(entity.world, pos, true);
 		return predicate.test(cbp);
 	}
 

@@ -1,12 +1,12 @@
 package com.github.originsplus.power;
 
-import io.github.apace100.origins.power.PowerType;
-import io.github.apace100.origins.power.ValueModifyingPower;
-import net.minecraft.entity.player.PlayerEntity;
+import io.github.apace100.apoli.power.PowerType;
+import io.github.apace100.apoli.power.ValueModifyingPower;
+import net.minecraft.entity.LivingEntity;
 
 public class SnowballDamagePower extends ValueModifyingPower {
 
-	public SnowballDamagePower(PowerType<?> type, PlayerEntity player) {
+	public SnowballDamagePower(PowerType<?> type, LivingEntity player) {
 		super(type, player);
 	}
 

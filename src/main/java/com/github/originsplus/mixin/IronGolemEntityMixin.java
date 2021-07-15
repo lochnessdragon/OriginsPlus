@@ -2,6 +2,7 @@ package com.github.originsplus.mixin;
 
 import java.util.List;
 
+import io.github.apace100.apoli.component.PowerHolderComponent;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
@@ -35,7 +36,7 @@ public abstract class IronGolemEntityMixin extends GolemEntity implements Angera
 			if(entity instanceof LivingEntity) {
 				LivingEntity player = (LivingEntity) entity;
 				
-				List<ModifyBehavior> powers = OriginComponent.getPowers(player, ModifyBehavior.class);
+				List<ModifyBehavior> powers = PowerHolderComponent.getPowers(player, ModifyBehavior.class);
 				powers.removeIf((power) -> {
 					return !power.checkEntity(EntityType.IRON_GOLEM);
 				});
