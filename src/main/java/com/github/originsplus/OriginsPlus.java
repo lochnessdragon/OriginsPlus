@@ -1,16 +1,8 @@
 package com.github.originsplus;
 
-import java.util.Map.Entry;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import com.github.originsplus.registry.ModEntityConditions;
 import com.github.originsplus.registry.ModEvents;
 import com.github.originsplus.registry.ModPowers;
-
-import io.github.apace100.origins.origin.Origin;
-import io.github.apace100.origins.origin.OriginRegistry;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.minecraft.entity.EntityType;
@@ -19,14 +11,13 @@ import net.minecraft.entity.mob.ZombieEntity;
 import net.minecraft.entity.mob.ZombieVillagerEntity;
 import net.minecraft.entity.passive.VillagerEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.projectile.thrown.SnowballEntity;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.NbtOps;
-import net.minecraft.nbt.Tag;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.Difficulty;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class OriginsPlus implements ModInitializer {
 
@@ -47,21 +38,20 @@ public class OriginsPlus implements ModInitializer {
 				if (ModPowers.CONVERT_VILLAGERS.isActive(player) && !player.isCreative()) {
 					if ((serverWorld.getDifficulty() == Difficulty.NORMAL
 							|| serverWorld.getDifficulty() == Difficulty.HARD)
-							&& entity instanceof VillagerEntity) {
+							&& entity instanceof VillagerEntity villagerEntity) {
 						if (serverWorld.getDifficulty() != Difficulty.HARD && serverWorld.random.nextBoolean()) {
 							return ActionResult.PASS;
 						}
 
-						VillagerEntity villagerEntity = (VillagerEntity) entity;
-						ZombieVillagerEntity zombieVillagerEntity = (ZombieVillagerEntity) villagerEntity
-								.method_29243(EntityType.ZOMBIE_VILLAGER, false);
+						ZombieVillagerEntity zombieVillagerEntity = villagerEntity
+								.convertTo(EntityType.ZOMBIE_VILLAGER, false);
 						zombieVillagerEntity.initialize(serverWorld,
 								serverWorld.getLocalDifficulty(zombieVillagerEntity.getBlockPos()),
-								SpawnReason.CONVERSION, new ZombieEntity.ZombieData(false, true), (CompoundTag) null);
+								SpawnReason.CONVERSION, new ZombieEntity.ZombieData(false, true), null);
 						zombieVillagerEntity.setVillagerData(villagerEntity.getVillagerData());
 						zombieVillagerEntity
-								.setGossipData((Tag) villagerEntity.getGossip().serialize(NbtOps.INSTANCE).getValue());
-						zombieVillagerEntity.setOfferData(villagerEntity.getOffers().toTag());
+								.setGossipData(villagerEntity.getGossip().serialize(NbtOps.INSTANCE).getValue());
+						zombieVillagerEntity.setOfferData(villagerEntity.getOffers().toNbt());
 						zombieVillagerEntity.setXp(villagerEntity.getExperience());
 						serverWorld.syncWorldEvent((PlayerEntity) null, 1026, player.getBlockPos(), 0);
 					}

@@ -1,20 +1,18 @@
 package com.github.originsplus.mixin;
 
-import java.util.List;
-
+import com.github.originsplus.power.ModifyBehavior;
+import com.github.originsplus.power.ModifyBehavior.EntityBehavior;
+import io.github.apace100.apoli.component.PowerHolderComponent;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.ai.brain.sensor.VillagerHostilesSensor;
+import net.minecraft.entity.player.PlayerEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import com.github.originsplus.power.ModifyBehavior;
-import com.github.originsplus.power.ModifyBehavior.EntityBehavior;
-
-import io.github.apace100.origins.component.OriginComponent;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.ai.brain.sensor.VillagerHostilesSensor;
-import net.minecraft.entity.player.PlayerEntity;
+import java.util.List;
 
 @Mixin(VillagerHostilesSensor.class)
 public class VillagerHostilesSensorMixin {
@@ -23,14 +21,8 @@ public class VillagerHostilesSensorMixin {
 	public void markZombiePlayerAsHostile(final LivingEntity entity, CallbackInfoReturnable<Boolean> info) {
 //		VillagerHostilesSensor sensor = (VillagerHostilesSensor) (Object) this;
 		
-		List<ModifyBehavior> powers = OriginComponent.getPowers(entity, ModifyBehavior.class);
-		powers.removeIf((power) -> {
-			if(power.checkEntity(EntityType.VILLAGER)) {
-				return false;
-			} else {
-				return true;
-			}
-		});
+		List<ModifyBehavior> powers = PowerHolderComponent.getPowers(entity, ModifyBehavior.class);
+		powers.removeIf((power) -> !power.checkEntity(EntityType.VILLAGER));
 		
 		if (!powers.isEmpty()) {
 			ModifyBehavior.EntityBehavior behavior = powers.get(0).getDesiredBehavior();
@@ -45,14 +37,8 @@ public class VillagerHostilesSensorMixin {
 //		System.out.println("Begin Zombie Method");
 		if(hostile instanceof PlayerEntity) {
 			PlayerEntity player = (PlayerEntity) hostile;
-			List<ModifyBehavior> powers = OriginComponent.getPowers(player, ModifyBehavior.class);
-			powers.removeIf((power) -> {
-				if(power.checkEntity(EntityType.VILLAGER)) {
-					return false;
-				} else {
-					return true;
-				}
-			});
+			List<ModifyBehavior> powers = PowerHolderComponent.getPowers(player, ModifyBehavior.class);
+			powers.removeIf((power) -> !power.checkEntity(EntityType.VILLAGER));
 			
 			if (!powers.isEmpty()) {
 				ModifyBehavior.EntityBehavior behavior = powers.get(0).getDesiredBehavior();

@@ -1,18 +1,18 @@
 package com.github.originsplus.registry;
 
-import java.util.List;
-
 import com.github.originsplus.OriginsPlus;
-
-import io.github.apace100.origins.power.factory.condition.ConditionFactory;
-import io.github.apace100.origins.registry.ModRegistries;
-import io.github.apace100.origins.util.SerializableData;
-import io.github.apace100.origins.util.SerializableDataType;
+import io.github.apace100.apoli.power.factory.condition.ConditionFactory;
+import io.github.apace100.apoli.registry.ApoliRegistries;
+import io.github.apace100.calio.data.SerializableData;
+import io.github.apace100.calio.data.SerializableDataType;
+import io.github.apace100.calio.data.SerializableDataTypes;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.registry.Registry;
+
+import java.util.List;
 
 public class ModEntityConditions {
 
@@ -20,7 +20,7 @@ public class ModEntityConditions {
 	public static void register() {
 		register(new ConditionFactory<>(
 				OriginsPlus.identifier("entities_in_radius"), new SerializableData()
-						.add("entities", SerializableDataType.list(SerializableDataType.ENTITY_TYPE)).add("radius", SerializableDataType.FLOAT),
+						.add("entities", SerializableDataType.list(SerializableDataTypes.ENTITY_TYPE)).add("radius", SerializableDataTypes.FLOAT),
 				(data, player) -> {
 					float radius = data.getFloat("radius");
 					List<EntityType<?>> entityList = (List<EntityType<?>>) data.get("entities");
@@ -37,6 +37,6 @@ public class ModEntityConditions {
 	}
 
     private static void register(ConditionFactory<LivingEntity> conditionFactory) {
-        Registry.register(ModRegistries.ENTITY_CONDITION, conditionFactory.getSerializerId(), conditionFactory);
+        Registry.register(ApoliRegistries.ENTITY_CONDITION, conditionFactory.getSerializerId(), conditionFactory);
     }
 }

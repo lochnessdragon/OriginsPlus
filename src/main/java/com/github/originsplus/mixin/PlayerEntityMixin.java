@@ -14,12 +14,12 @@ import net.minecraft.util.Identifier;
 @Mixin(PlayerEntity.class)
 public class PlayerEntityMixin {
 
-	@Inject(at = @At("HEAD"), method = "incrementStat", cancellable = true)
-	public void preventPhantomSpawn(Identifier stat, CallbackInfo info) {
+	@Inject(at = @At("HEAD"), method = "incrementStat(Lnet/minecraft/util/Identifier;)V", cancellable = true)
+	public void preventPhantomSpawn(Identifier stat, CallbackInfo ci) {
 		if(stat == Stats.TIME_SINCE_REST) {
 			if(ModPowers.PREVENT_PHANTOM_SPAWN.isActive((PlayerEntity) (Object) this)) {
 				//System.out.println("prevented time since rest from incrementing");
-				info.cancel();
+				ci.cancel();
 			}
 		}
 	}

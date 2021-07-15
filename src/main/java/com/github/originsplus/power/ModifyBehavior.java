@@ -1,18 +1,19 @@
 package com.github.originsplus.power;
 
-import java.util.List;
-
-import io.github.apace100.origins.power.Power;
-import io.github.apace100.origins.power.PowerType;
+import io.github.apace100.apoli.power.Power;
+import io.github.apace100.apoli.power.PowerType;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
+
+import java.util.List;
 
 public class ModifyBehavior extends Power {
 
 	List<EntityType<?>> affectedEntities;
 	EntityBehavior desiredBehavior;
 	
-	public ModifyBehavior(PowerType<?> type, PlayerEntity player, EntityBehavior desiredBehavior, List<EntityType<?>> affectedEntities) {
+	public ModifyBehavior(PowerType<?> type, LivingEntity player, EntityBehavior desiredBehavior, List<EntityType<?>> affectedEntities) {
 		super(type, player);
 		this.affectedEntities = affectedEntities;
 		this.desiredBehavior = desiredBehavior;

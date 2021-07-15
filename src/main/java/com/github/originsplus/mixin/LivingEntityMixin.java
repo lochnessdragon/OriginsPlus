@@ -1,5 +1,7 @@
 package com.github.originsplus.mixin;
 
+import io.github.apace100.apoli.component.PowerHolderComponent;
+import io.github.apace100.apoli.power.Power;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -19,10 +21,8 @@ public class LivingEntityMixin {
 	public void updateWaterWalkingPower(BlockPos pos, CallbackInfo info) {
 		LivingEntity entity = (LivingEntity) (Object) this;
 		
-		if(OriginComponent.hasPower(entity, WaterWalkingPower.class)) {
-			int strength = OriginComponent.getPowers(entity, WaterWalkingPower.class).stream().mapToInt((power) -> {
-				return power.getStrength();
-			}).sorted().findFirst().getAsInt();
+		if(PowerHolderComponent.hasPower(entity, WaterWalkingPower.class)) {
+			int strength = PowerHolderComponent.getPowers(entity, WaterWalkingPower.class).stream().mapToInt(WaterWalkingPower::getStrength).sorted().findFirst().getAsInt();
 			
 			FrostWalkerEnchantment.freezeWater(entity, entity.world, pos, strength);
 		}

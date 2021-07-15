@@ -1,12 +1,10 @@
 package com.github.originsplus.power;
 
-import io.github.apace100.origins.power.Power;
-import io.github.apace100.origins.power.PowerType;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.player.PlayerEntity;
+import io.github.apace100.apoli.power.Power;
+import io.github.apace100.apoli.power.PowerType;
+import net.minecraft.entity.LivingEntity;
 import virtuoel.pehkui.api.ScaleData;
 import virtuoel.pehkui.api.ScaleType;
-import virtuoel.pehkui.util.ScaleUtils;
 
 public class ModifyScalePower extends Power {
 
@@ -14,7 +12,7 @@ public class ModifyScalePower extends Power {
 
 	public final float scale;
 
-	public ModifyScalePower(PowerType<?> type, PlayerEntity player, float scale) {
+	public ModifyScalePower(PowerType<?> type, LivingEntity player, float scale) {
 		super(type, player);
 		this.scale = scale;
 	}
@@ -36,7 +34,7 @@ public class ModifyScalePower extends Power {
 	}
 	
 	private void setScale(float scale, ScaleType type) {
-		ScaleData scaleData = type.getScaleData(player);
+		ScaleData scaleData = type.getScaleData(entity);
 		scaleData.setScale(scale);
 	}
 

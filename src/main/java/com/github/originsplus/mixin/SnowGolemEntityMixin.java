@@ -2,6 +2,7 @@ package com.github.originsplus.mixin;
 
 import java.util.List;
 
+import io.github.apace100.apoli.component.PowerHolderComponent;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -31,22 +32,13 @@ public abstract class SnowGolemEntityMixin extends GolemEntity implements Sheara
 	@Inject(at = @At(value = "RETURN"), method = "initGoals", cancellable = true)
 	public void initPlayerZombieGoals(CallbackInfo info) {
 		this.targetSelector.add(1, new FollowTargetGoal(this, PlayerEntity.class, 10, true, false, (entity) -> {
-			if(entity instanceof PlayerEntity) {
-				PlayerEntity player = (PlayerEntity) entity;
-				List<ModifyBehavior> powers = OriginComponent.getPowers(player, ModifyBehavior.class);
-				powers.removeIf((power) -> {
-					if(power.checkEntity(this.getType())) {
-						return false;
-					} else {
-						return true;
-					}
-				});
+			if(entity instanceof PlayerEntity player) {
+				List<ModifyBehavior> powers = PowerHolderComponent.getPowers(player, ModifyBehavior.class);
+				powers.removeIf((power) -> !power.checkEntity(this.getType()));
 			
 				if (!powers.isEmpty()) {
 					ModifyBehavior.EntityBehavior behavior = powers.get(0).getDesiredBehavior();
-					if(behavior == EntityBehavior.HOSTILE) {
-						return true;
-					}
+					return behavior == EntityBehavior.HOSTILE;
 				}
 			}
 			return false;
