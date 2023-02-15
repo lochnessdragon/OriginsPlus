@@ -1,14 +1,10 @@
 package com.github.originsplus.registry;
 
-import java.util.Optional;
-import java.util.function.Consumer;
-
 import com.github.originsplus.events.BlockDropCallback;
 import com.github.originsplus.events.EntityInteractCallback;
 import com.github.originsplus.power.ExplodePower;
 import com.github.originsplus.power.ModifyBlockDrop;
-
-import io.github.apace100.origins.component.OriginComponent;
+import io.github.apace100.apoli.component.PowerHolderComponent;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -17,6 +13,9 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 
+import java.util.Optional;
+import java.util.function.Consumer;
+
 public class ModEvents {
 
 	public static void register() {
@@ -24,9 +23,9 @@ public class ModEvents {
 		BlockDropCallback.EVENT.register((block, state, world, pos, player) -> {
 			if (!world.isClient) {
 				// System.out.println("Block broken!");
-				if (OriginComponent.hasPower(player, ModifyBlockDrop.class)) {
+				if (PowerHolderComponent.hasPower(player, ModifyBlockDrop.class)) {
 					// System.out.println("Player has the modify block drop power");
-					Optional<ModifyBlockDrop> dropOptional = OriginComponent.getPowers(player, ModifyBlockDrop.class)
+					Optional<ModifyBlockDrop> dropOptional = PowerHolderComponent.getPowers(player, ModifyBlockDrop.class)
 							.stream().filter((power) -> {
 								return power.doesApply(pos);
 							}).sorted((power1, power2) -> {
@@ -61,8 +60,8 @@ public class ModEvents {
 		EntityInteractCallback.EVENT.register((player, hand, entity) -> {
 			if (entity instanceof PlayerEntity) {
 				PlayerEntity affectedPlayer = (PlayerEntity) entity;
-				if (OriginComponent.hasPower(affectedPlayer, ExplodePower.class)) {
-					ExplodePower power = OriginComponent.getPowers(affectedPlayer, ExplodePower.class).get(0);
+				if (PowerHolderComponent.hasPower(affectedPlayer, ExplodePower.class)) {
+					ExplodePower power = PowerHolderComponent.getPowers(affectedPlayer, ExplodePower.class).get(0);
 
 					if (power.isIgnitable()) {
 						ItemStack stack = player.getStackInHand(hand);

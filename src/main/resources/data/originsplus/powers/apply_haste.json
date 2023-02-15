@@ -22,10 +22,6 @@
 			},
 			{
 				"type": "origins:in_tag",
-				"tag": "minecraft:stone_tool_materials"
-			},
-			{
-				"type": "origins:in_tag",
 				"tag": "minecraft:gold_ores"
 			},
 			{
