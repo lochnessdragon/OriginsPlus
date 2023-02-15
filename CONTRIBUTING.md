@@ -1,2 +1,4 @@
 # Contributing Guidelines
-This document has yet to be written.
+
+## Thank you to our contributors!
+* [@williambl](https://github.com/williambl)
