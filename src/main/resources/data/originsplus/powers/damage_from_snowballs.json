@@ -1,10 +1,13 @@
 {
-  "type": "originsplus:modify_snowball_damage",
-  "modifier":{  
-    "name": "Snowball damage given",
+  "type": "apoli:modify_projectile_damage",
+  "modifier": {
+  	"name": "Snowball damage given",
     "value": 4,
     "operation": "addition"
   },
- "hidden":false
+  "damage_condition": {
+    "type": "apoli:projectile",
+    "projectile": "minecraft:snowball"
+  }
 }
 

@@ -9,7 +9,7 @@
   	"ServerPlayerEntityMixin",
   	"PlayerEntityMixin",
   	"MobSpawnerLogicMixin",
-  	"SnowballEntityMixin",
+  	// "SnowballEntityMixin",
   	"LivingEntityMixin",
   	"FishingBobberEntityMixin",
   	"FollowTargetGoalAccessor",

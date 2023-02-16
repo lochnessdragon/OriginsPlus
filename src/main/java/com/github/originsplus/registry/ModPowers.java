@@ -1,8 +1,18 @@
 package com.github.originsplus.registry;
 
+import java.util.List;
+
 import com.github.originsplus.OriginsPlus;
-import com.github.originsplus.power.*;
+import com.github.originsplus.power.BlockPlayerSleep;
+import com.github.originsplus.power.ExplodePower;
+import com.github.originsplus.power.GrapplePower;
+import com.github.originsplus.power.ImproveSpawnersPower;
+import com.github.originsplus.power.ModifyBehavior;
 import com.github.originsplus.power.ModifyBehavior.EntityBehavior;
+import com.github.originsplus.power.ModifyBlockDrop;
+import com.github.originsplus.power.ModifyScalePower;
+import com.github.originsplus.power.WaterWalkingPower;
+
 import io.github.apace100.apoli.data.ApoliDataTypes;
 import io.github.apace100.apoli.power.Active;
 import io.github.apace100.apoli.power.PowerTypeReference;
@@ -14,10 +24,9 @@ import io.github.apace100.calio.data.SerializableData;
 import io.github.apace100.calio.data.SerializableDataType;
 import io.github.apace100.calio.data.SerializableDataTypes;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.attribute.EntityAttributeModifier;
+import net.minecraft.registry.Registry;
 import net.minecraft.sound.SoundEvent;
-import net.minecraft.util.registry.Registry;
-
-import java.util.List;
 
 public class ModPowers {
 
@@ -90,25 +99,19 @@ public class ModPowers {
 				new SerializableData().add("radius", SerializableDataTypes.FLOAT).add("modifier",
 						SerializableDataTypes.ATTRIBUTE_MODIFIER, null),
 				(data) -> (type, player) -> {
-					ImproveSpawnersPower power = new ImproveSpawnersPower(type, player, data.getFloat("radius"));
-
-					if (data.isPresent("modifier")) {
-						power.addModifier(data.getModifier("modifier"));
-					}
+					EntityAttributeModifier mod = data.getModifier("modifier");
+					ImproveSpawnersPower power = new ImproveSpawnersPower(type, player, data.getFloat("radius"), mod);
 
 					return power;
 				}).allowCondition());
-		register(new PowerFactory<>(OriginsPlus.identifier("modify_snowball_damage"),
+		/*register(new PowerFactory<>(OriginsPlus.identifier("modify_snowball_damage"),
 				new SerializableData().add("modifier", SerializableDataTypes.ATTRIBUTE_MODIFIER, null),
 				(data) -> (type, player) -> {
 					SnowballDamagePower power = new SnowballDamagePower(type, player);
-
-					if (data.isPresent("modifier")) {
-						power.addModifier(data.getModifier("modifier"));
-					}
+					data.ifPresent("modifier", power::addModifier);
 
 					return power;
-				}).allowCondition());
+				}).allowCondition());*/
 		register(new PowerFactory<>(OriginsPlus.identifier("frost_walker"),
 				new SerializableData().add("strength", SerializableDataTypes.INT, 1), (data) -> (type, player) -> {
 					return new WaterWalkingPower(type, player, data.getInt("strength"));

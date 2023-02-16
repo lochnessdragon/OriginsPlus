@@ -21,7 +21,7 @@ public class SnowballEntityMixin {
 	public void increaseSnowballDamage(EntityHitResult entityHitResult, CallbackInfo info) {
 		SnowballEntity entity = (SnowballEntity) (Object) this;
 
-		if (PowerHolderComponent.hasPower(entity.getOwner(), SnowballDamagePower.class)) {
+		/*if (PowerHolderComponent.hasPower(entity.getOwner(), SnowballDamagePower.class)) {
 			List<SnowballDamagePower> powers = PowerHolderComponent.getPowers(entity.getOwner(), SnowballDamagePower.class);
 			double damage = 0;
 			for (SnowballDamagePower power : powers) {
@@ -46,7 +46,7 @@ public class SnowballEntityMixin {
 			}
 			
 			entityHitResult.getEntity().damage(DamageSource.thrownProjectile(entity, entity.getOwner()), (float) damage);
-		}
+		}*/
 	}
 
 }

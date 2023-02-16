@@ -50,7 +50,7 @@ public class OriginsPlus implements ModInitializer {
 								SpawnReason.CONVERSION, new ZombieEntity.ZombieData(false, true), null);
 						zombieVillagerEntity.setVillagerData(villagerEntity.getVillagerData());
 						zombieVillagerEntity
-								.setGossipData(villagerEntity.getGossip().serialize(NbtOps.INSTANCE).getValue());
+								.setGossipData(villagerEntity.getGossip().serialize(NbtOps.INSTANCE));
 						zombieVillagerEntity.setOfferData(villagerEntity.getOffers().toNbt());
 						zombieVillagerEntity.setXp(villagerEntity.getExperience());
 						serverWorld.syncWorldEvent((PlayerEntity) null, 1026, player.getBlockPos(), 0);

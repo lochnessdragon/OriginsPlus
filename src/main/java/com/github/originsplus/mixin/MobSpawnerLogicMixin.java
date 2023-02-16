@@ -4,10 +4,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Stream;
 
-import io.github.apace100.apoli.component.PowerHolderComponent;
-import net.minecraft.server.world.ServerWorld;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -16,10 +12,12 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import com.github.originsplus.power.ImproveSpawnersPower;
 
-import io.github.apace100.origins.component.OriginComponent;
+import io.github.apace100.apoli.component.PowerHolderComponent;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributeModifier.Operation;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.server.world.ServerWorld;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.MobSpawnerLogic;
 
 @Mixin(MobSpawnerLogic.class)
@@ -45,9 +43,10 @@ public class MobSpawnerLogicMixin {
 			ImproveSpawnersPower power = powers.get(0);
 			
 			if (pos.isWithinDistance(player.getBlockPos(), power.getRadius())) {
-				for(EntityAttributeModifier modifier : power.getModifiers()) {
-					Operation operation = modifier.getOperation();
-					double value = modifier.getValue();
+				{
+					EntityAttributeModifier mod = power.getModifier();
+					Operation operation = mod.getOperation();
+					double value = mod.getValue();
 
 					switch (operation) {
 					case ADDITION:

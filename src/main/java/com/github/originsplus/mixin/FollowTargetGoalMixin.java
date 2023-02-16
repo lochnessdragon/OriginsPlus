@@ -2,10 +2,6 @@ package com.github.originsplus.mixin;
 
 import java.util.List;
 
-import io.github.apace100.apoli.component.PowerHolderComponent;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.ai.goal.TrackTargetGoal;
-import net.minecraft.entity.mob.MobEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -15,10 +11,13 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import com.github.originsplus.power.ModifyBehavior;
 import com.github.originsplus.power.ModifyBehavior.EntityBehavior;
 
-import io.github.apace100.origins.component.OriginComponent;
-import net.minecraft.entity.ai.goal.FollowTargetGoal;
+import io.github.apace100.apoli.component.PowerHolderComponent;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.ai.goal.ActiveTargetGoal;
+import net.minecraft.entity.ai.goal.TrackTargetGoal;
+import net.minecraft.entity.mob.MobEntity;
 
-@Mixin(FollowTargetGoal.class)
+@Mixin(ActiveTargetGoal.class)
 public abstract class FollowTargetGoalMixin extends TrackTargetGoal {
 
 	@Shadow protected LivingEntity targetEntity;
@@ -28,7 +27,7 @@ public abstract class FollowTargetGoalMixin extends TrackTargetGoal {
 	}
 
 	@Inject(at = @At(value = "HEAD"), method = "start", cancellable = true)
-	public void blockZombieTarget(CallbackInfo info) {
+	public void blockZombieAsTarget(CallbackInfo info) {
 		List<ModifyBehavior> powers = PowerHolderComponent.getPowers(targetEntity, ModifyBehavior.class);
 		powers.removeIf((power) -> !power.checkEntity(targetEntity.getType()));
 		

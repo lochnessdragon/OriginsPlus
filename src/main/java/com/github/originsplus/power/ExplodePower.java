@@ -5,7 +5,8 @@ import io.github.apace100.apoli.power.PowerType;
 import io.github.apace100.apoli.util.HudRender;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.world.explosion.Explosion.DestructionType;
+import net.minecraft.world.World.ExplosionSourceType;
+import net.minecraft.world.explosion.Explosion;
 
 public class ExplodePower extends ActiveCooldownPower {
 
@@ -35,11 +36,11 @@ public class ExplodePower extends ActiveCooldownPower {
 	}
 	
 	private void explode() {
-		DestructionType type = shouldBreakBlocks ? DestructionType.BREAK : DestructionType.NONE;
+		ExplosionSourceType type = shouldBreakBlocks ? ExplosionSourceType.MOB : ExplosionSourceType.NONE;
 		
-		entity.world.createExplosion(entity, entity.getX(), entity.getY(), entity.getZ(), explosionStrength, type);
+		Explosion explosion = entity.world.createExplosion(entity, entity.getX(), entity.getY(), entity.getZ(), explosionStrength, type);
 	
-		entity.damage(DamageSource.explosion(entity), selfDamage);
+		entity.damage(DamageSource.explosion(explosion), selfDamage);
 	}
 	
 	public boolean isIgnitable() {

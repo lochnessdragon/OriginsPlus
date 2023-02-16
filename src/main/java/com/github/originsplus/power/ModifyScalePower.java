@@ -5,10 +5,11 @@ import io.github.apace100.apoli.power.PowerType;
 import net.minecraft.entity.LivingEntity;
 import virtuoel.pehkui.api.ScaleData;
 import virtuoel.pehkui.api.ScaleType;
+import virtuoel.pehkui.api.ScaleTypes;
 
 public class ModifyScalePower extends Power {
 
-	private static final ScaleType[] MODIFY_SIZE_TYPES = { ScaleType.WIDTH, ScaleType.HEIGHT, ScaleType.DROPS };
+	private static final ScaleType[] MODIFY_SIZE_TYPES = { ScaleTypes.WIDTH, ScaleTypes.HEIGHT, ScaleTypes.DROPS, ScaleTypes.VISIBILITY };
 
 	public final float scale;
 

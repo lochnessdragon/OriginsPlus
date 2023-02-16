@@ -2,7 +2,6 @@ package com.github.originsplus.mixin;
 
 import java.util.List;
 
-import io.github.apace100.apoli.component.PowerHolderComponent;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
@@ -10,10 +9,10 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 import com.github.originsplus.power.ModifyBehavior;
 import com.github.originsplus.power.ModifyBehavior.EntityBehavior;
 
-import io.github.apace100.origins.component.OriginComponent;
+import io.github.apace100.apoli.component.PowerHolderComponent;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.ai.goal.FollowTargetGoal;
+import net.minecraft.entity.ai.goal.ActiveTargetGoal;
 import net.minecraft.entity.ai.goal.Goal;
 import net.minecraft.entity.ai.goal.GoalSelector;
 import net.minecraft.entity.mob.Angerable;
@@ -32,7 +31,7 @@ public abstract class IronGolemEntityMixin extends GolemEntity implements Angera
 
 	@Redirect(at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/ai/goal/GoalSelector;add(ILnet/minecraft/entity/ai/goal/Goal;)V", ordinal = 9), method = "initGoals")
 	public void overrideFollowTargetGoalForZombies(GoalSelector goalSelector, int priority, Goal goal) {
-		Goal newGoal = new FollowTargetGoal(this, PlayerEntity.class, 10, true, false, (entity) -> {
+		Goal newGoal = new ActiveTargetGoal<PlayerEntity>(this, PlayerEntity.class, 10, true, false, (entity) -> {
 			if(entity instanceof LivingEntity) {
 				LivingEntity player = (LivingEntity) entity;
 				
