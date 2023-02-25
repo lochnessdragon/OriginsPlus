@@ -12,8 +12,8 @@
   	// "SnowballEntityMixin",
   	"LivingEntityMixin",
   	"FishingBobberEntityMixin",
-  	"FollowTargetGoalAccessor",
-  	"FollowTargetGoalMixin",
+  	"ActiveTargetGoalAccessor",
+  	"ActiveTargetGoalMixin",
   	"VillagerHostilesSensorMixin",
   	"SnowGolemEntityMixin",
   	"IronGolemEntityMixin"

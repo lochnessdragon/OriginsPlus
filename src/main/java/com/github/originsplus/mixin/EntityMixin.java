@@ -12,6 +12,11 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 
+/**
+ * This mixin contains one injection method that calls an event when an entity is interacted with by the player.
+ * 
+ * It is used by the creeper origin in the ExplodePower power
+ */
 @Mixin(Entity.class)
 public class EntityMixin {
 	

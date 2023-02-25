@@ -8,6 +8,7 @@ import net.minecraft.entity.player.PlayerEntity;
 
 import java.util.List;
 
+// TODO: Make this class work on all mobs
 public class ModifyBehavior extends Power {
 
 	List<EntityType<?>> affectedEntities;

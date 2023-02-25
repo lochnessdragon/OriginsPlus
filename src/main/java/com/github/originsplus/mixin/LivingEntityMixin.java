@@ -1,7 +1,5 @@
 package com.github.originsplus.mixin;
 
-import io.github.apace100.apoli.component.PowerHolderComponent;
-import io.github.apace100.apoli.power.Power;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -9,11 +7,15 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import com.github.originsplus.power.WaterWalkingPower;
 
-import io.github.apace100.origins.component.OriginComponent;
+import io.github.apace100.apoli.component.PowerHolderComponent;
 import net.minecraft.enchantment.FrostWalkerEnchantment;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.util.math.BlockPos;
 
+/**
+ * This mixing contains one injection method which creates the blocks for
+ * the snowman's water-walking power.
+ */
 @Mixin(LivingEntity.class)
 public class LivingEntityMixin {
 

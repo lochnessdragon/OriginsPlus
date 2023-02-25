@@ -7,7 +7,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.goal.ActiveTargetGoal;
 
 @Mixin(ActiveTargetGoal.class)
-public interface FollowTargetGoalAccessor {
+public interface ActiveTargetGoalAccessor {
 
 	@Accessor("targetEntity")
 	public LivingEntity getTargetEntity();

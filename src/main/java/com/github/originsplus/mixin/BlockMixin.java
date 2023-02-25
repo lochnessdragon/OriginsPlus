@@ -7,16 +7,18 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import com.github.originsplus.events.BlockDropCallback;
 
-import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
+/**
+ * This mixin contains one injection method which calls the block drop event.
+ * These Origins rely on this mixin:
+ *  - dwarf: (power: ModifyBlockDrop)
+ */
 @Mixin(Block.class)
 public class BlockMixin {
 

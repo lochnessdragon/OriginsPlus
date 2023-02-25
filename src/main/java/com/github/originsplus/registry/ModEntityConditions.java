@@ -20,6 +20,8 @@ public class ModEntityConditions {
 	@SuppressWarnings("unchecked")
 	public static void register() {
 		register(new ConditionFactory<>(
+				// entities_in_radius:
+				//   returns true if any of the specified entity types (minecraft ids) are in the specified radius
 				OriginsPlus.identifier("entities_in_radius"), new SerializableData()
 						.add("entities", SerializableDataType.list(SerializableDataTypes.ENTITY_TYPE)).add("radius", SerializableDataTypes.FLOAT),
 				(data, player) -> {
@@ -28,11 +30,14 @@ public class ModEntityConditions {
 					
 					boolean locatedEntity = false;
 					
+					// potential optimization: early return?
 					for(EntityType type : entityList) {
-						locatedEntity = locatedEntity || !player.world.getEntitiesByType(type, new Box(new Vec3d(player.getX() - radius, player.getY() - radius, player.getZ() - radius), new Vec3d(player.getX() + radius, player.getY() + radius, player.getZ() + radius)), (entity) -> {return true;}).isEmpty();
+						locatedEntity = locatedEntity || !player.world.getEntitiesByType(type, 
+															new Box(new Vec3d(player.getX() - radius, player.getY() - radius, player.getZ() - radius), 
+															new Vec3d(player.getX() + radius, player.getY() + radius, player.getZ() + radius)), 
+															(entity) -> {return true;}).isEmpty();
 					}
 					
-					//List entities = player.world.getEntitiesByType((EntityType) data.get("entity"), new Box(new Vec3d(player.getX() - radius, player.getY() - radius, player.getZ() - radius), new Vec3d(player.getX() + radius, player.getY() + radius, player.getZ() + radius)), (entity) -> {return true;});
 					return locatedEntity;
 				}));
 	}

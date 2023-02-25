@@ -18,18 +18,18 @@ import net.minecraft.entity.ai.goal.TrackTargetGoal;
 import net.minecraft.entity.mob.MobEntity;
 
 @Mixin(ActiveTargetGoal.class)
-public abstract class FollowTargetGoalMixin extends TrackTargetGoal {
+public abstract class ActiveTargetGoalMixin extends TrackTargetGoal {
 
 	@Shadow protected LivingEntity targetEntity;
 
-	public FollowTargetGoalMixin(MobEntity mob, boolean checkVisibility) {
+	public ActiveTargetGoalMixin(MobEntity mob, boolean checkVisibility) {
 		super(mob, checkVisibility);
 	}
 
 	@Inject(at = @At(value = "HEAD"), method = "start", cancellable = true)
 	public void blockZombieAsTarget(CallbackInfo info) {
 		List<ModifyBehavior> powers = PowerHolderComponent.getPowers(targetEntity, ModifyBehavior.class);
-		powers.removeIf((power) -> !power.checkEntity(targetEntity.getType()));
+		powers.removeIf((power) -> !power.checkEntity(this.mob.getType()));
 		
 		if (!powers.isEmpty()) {
 			ModifyBehavior.EntityBehavior behavior = powers.get(0).getDesiredBehavior();

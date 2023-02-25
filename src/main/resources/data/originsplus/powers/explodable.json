@@ -3,7 +3,10 @@
 	"break_blocks": false,
 	"strength": 2,
 	"self_damage": 4,
-	"key": "primary",
+	"key": {
+		"key": "key.origins.primary_active",
+		"continuous": false
+	},
 	"cooldown": 80,
 	"ignitable": true,
 	"hud_render": {

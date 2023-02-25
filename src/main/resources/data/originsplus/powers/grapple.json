@@ -7,7 +7,10 @@
 		"sprite_location": "originsplus:textures/gui/originsplus/resource_bar_01.png",
 		"bar_index": 0
 	},
-	"key": "primary",
+	"key": {
+		"key": "key.origins.primary_active",
+		"continuous": false
+	},
 	"sound_on_thrown": "minecraft:entity.fishing_bobber.throw",
 	"sound_on_retract": "minecraft:entity.fishing_bobber.retrieve",
 	"condition": {

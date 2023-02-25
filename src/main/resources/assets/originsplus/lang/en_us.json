@@ -53,8 +53,8 @@
 	"power.originsplus.ice_speed.name": "Ice speed",
 	"power.originsplus.ice_speed.description": "You use the slipperiness of ice to your advantage to gain extra speed.",
 	
-	"power.originsplus.firewall.name": "Fireball",
-	"power.originsplus.firewall.description": "You can hurl flaming balls of fire at your enemies.",
+	"power.originsplus.fireball.name": "Fireball",
+	"power.originsplus.fireball.description": "You can hurl flaming balls of fire at your enemies.",
 	
 	"power.originsplus.explodable.name": "DANGER Handle with care",
 	"power.originsplus.explodable.description": "You can activate your ability to cause a small explosion. It doesn't blow up blocks, but it can pack a punch.",
@@ -68,7 +68,7 @@
 	"power.originsplus.grapple.name": "Tree Swinger",
 	"power.originsplus.grapple.description": "You can grapple to any block at will.",
 	
-	"power.originsplus.sleep_in_trees.name": "The comfort of the jungle.",
+	"power.originsplus.sleep_in_trees.name": "Jungle comforts.",
 	"power.originsplus.sleep_in_trees.description": "You have to sleep on leaf blocks or above Y-level 75.",
 	
 	"power.originsplus.convert_villagers.name": "The Plague",
