@@ -28,6 +28,9 @@ repositories {
 	}
 	maven {
 		url "https://maven.jamieswhiteshirt.com/libs-release/"
+		content {
+			includeGroup "com.jamieswhiteshirt"
+		}
 	}
 	maven {
 		url "https://maven.shedaniel.me/"
@@ -38,6 +41,7 @@ repositories {
 	maven {
 		url 'https://jitpack.io'
 	}
+	mavenLocal()
 }
 
 dependencies {
