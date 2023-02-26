@@ -1,7 +1,7 @@
 # Origins+ Mod
-![Build Badge](https://img.shields.io/github/workflow/status/lochnessdragon/OriginsPlus/build) ![Version](https://img.shields.io/github/v/release/lochnessdragon/OriginsPlus)
+![Build Badge](https://github.com/lochnessdragon/OriginsPlus/workflows/build/badge.svg) ![Version](https://img.shields.io/github/v/release/lochnessdragon/OriginsPlus)
 
-Error Checker: ![Error Check Badge](https://img.shields.io/github/workflow/status/lochnessdragon/OriginsPlus/Gradle%20Error%20Checker)
+Error Checker: [![GitHub Super-Linter](https://github.com/lochnessdragon/OriginsPlus/workflows/Java%20Linter/badge.svg)](https://github.com/marketplace/actions/super-linter)
 
 ## Setup
 
