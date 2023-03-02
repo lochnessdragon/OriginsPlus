@@ -1,3 +1,5 @@
+![Origins Logo](https://raw.githubusercontent.com/lochnessdragon/OriginsPlus/main/branding/origins-plus-logo.png)
+
 # Origins+ Mod
 ![Build Badge](https://github.com/lochnessdragon/OriginsPlus/workflows/build/badge.svg) ![Version](https://img.shields.io/github/v/release/lochnessdragon/OriginsPlus) [![GitHub Super-Linter](https://github.com/lochnessdragon/OriginsPlus/workflows/Java%20Linter/badge.svg)](https://github.com/marketplace/actions/super-linter)
 
